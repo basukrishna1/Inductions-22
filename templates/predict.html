@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{ url_for('static', filename='predict.css') }}
+    >
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/predict" method="post">
+      <div class="contain">
+        <div class="inp">Predicting the Species</div>
+
+        <input
+          type="text"
+          class="inp1"
+          name="Slength2"
+          placeholder="Sepal Length"
+          required
+        />
+        <input
+          type="text"
+          class="inp1"
+          name="Swidth2"
+          placeholder="Sepal Width"
+          required
+        />
+        <input
+          type="text"
+          class="inp1"
+          name="Plength2"
+          placeholder="Petal Length"
+          required
+        />
+        <input
+          type="text"
+          class="inp1"
+          name="Pwidth2"
+          placeholder="Petal Width"
+          required
+        />
+        <button type="submit" class="click">
+          <a href="/Predict"> Predict </a>
+        </button>
+
+        {% if pred==0 %}
+        <h4>It is a Iris-setosa</h4>
+        {% elif pred==1 %}
+        <h4>It is Iris-versicolor</h4>
+        {% elif pred==2 %}
+        <h4>It is Iris-virginica</h4>
+        {%else%}
+        <div></div>
+        {% endif %}
+        <a href="/" id="lik">Go Back to Home</a>
+      </div>
+    </form>
+  </body>
+</html>

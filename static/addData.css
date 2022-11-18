@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.contain{
+   margin: 10px;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-rows: repeat(1fr,5);
+    border: 5px solid black;
+    border-radius: 20px;
+
+}
+.inp{
+    display: flex;
+    
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.inp1{
+    margin: 5px;
+    
+}
+.click{
+    margin: auto;
+    font-size: 25px;
+    border-radius: 25px;
+    transition: all 0.4s;
+}
+.click:hover{
+    cursor: pointer;
+    background: rgb(50,243,50);
+    scale: 1.05;
+
+}
+#lik{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
